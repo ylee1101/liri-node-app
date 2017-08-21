@@ -11,14 +11,14 @@ var omdbKeys = {
 	omdb_key: process.env.OMDB_API_KEY
 };
 
-var twitterKeys = {
-  consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  access_token_key: process.env.TWITTER_ACCESS_TOKEN,
-  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-};
+// var twitterKeys = {
+//   consumer_key: process.env.TWITTER_CONSUMER_KEY,
+//   consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+//   access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+//   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+// };
 
-// console.log(process.env.OMDB_API_KEY);
+// console.log(twitterKeys);
 
 // Make it so liri.js can take in one of the following commands:
 // my-tweets
@@ -30,9 +30,14 @@ var twitter = require('twitter');
 var spotify = require('spotify');
 var request = require('request');
 
-// twitter section
+// // twitter section
 var myTweets = function() {
-	var client = new twitter(process.env.twitterKeys);
+	var client = new twitter({
+  		consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  		consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  		access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  		access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+	});
 
 	var params = {screen_name: 'nodejs', count: 10};
 
@@ -65,12 +70,26 @@ var myTweets = function() {
 //     // Do something with 'data' 
 // });
 
-// // omdb section 
+// // // omdb section 
 // request('http://www.google.com', function (error, response, body) {
 //   console.log('error:', error); // Print the error if one occurred 
 //   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
 //   console.log('body:', body); // Print the HTML for the Google homepage. 
 // });
+
+// for logging to log.txt section
+var writeToLog = function(data) {
+	fs.appendFile("log.txt", '\r\n\r\n');
+
+	fs.appendFile("log.txt", JSON.stringify(data), function(error){
+		if (error) {
+			return console.log(error);
+		}
+		console.log("log.txt is updated");
+	});
+}
+
+
 // What Each Command Should Do
 
 // node liri.js my-tweets
