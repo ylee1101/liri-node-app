@@ -1,0 +1,26 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "liri-node-app",
+  "main": "liri.js",
+  "dependencies": {
+    "request": "^2.81.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node liri.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylee1101/liri-node-app.git"
+  },
+  "author": "brandon lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ylee1101/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/ylee1101/liri-node-app#readme"
+}

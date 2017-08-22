@@ -2,14 +2,14 @@
 // var keys = require("./keys.js") 
 
 // set up key datas for bash-profile
-var spotifyKeys = {
-	spotify_id: process.env.SPOTIFY_ID,
-	spotify_secret: process.env.SPOTIFY_SECRET
-};
+// var spotifyKeys = {
+// 	spotify_id: process.env.SPOTIFY_ID,
+// 	spotify_secret: process.env.SPOTIFY_SECRET
+// };
 
-var omdbKeys = {
-	omdb_key: process.env.OMDB_API_KEY
-};
+// var omdbKeys = {
+// 	omdb_key: process.env.OMDB_API_KEY
+// };
 
 // var twitterKeys = {
 //   consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -27,8 +27,31 @@ var omdbKeys = {
 // do-what-it-says
 var fs = require('fs');
 var twitter = require('twitter');
-var spotify = require('spotify');
+// var spotify = require('spotify');
 var request = require('request');
+var arg = process.argv[2];
+
+// var keys = require('./bash-profile');
+// console.log(keys);
+
+// commands for liri to work
+switch(arg) {
+	case "my-tweets": 
+		myTweets(); 
+		break;
+	case "spotify-this-song": 
+		spotifyThisSong(); 
+		break;
+	case "movie-this": 
+		movieThis(); 
+		break;
+	case "do-what-it-says": 
+		doWhatItSays();
+		break;
+	default: 
+		console.log("What are you talking about?");
+
+};
 
 // // twitter section
 var myTweets = function() {
@@ -39,7 +62,7 @@ var myTweets = function() {
   		access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 	});
 
-	var params = {screen_name: 'nodejs', count: 10};
+	var params = {screen_name: 'Brandon lee', count: 20};
 
 	client.get('statuses/user_timeline', params, function(error, tweets, response){
   		if (!error) {
@@ -53,14 +76,17 @@ var myTweets = function() {
   					'Tweets: ' : tweets[i].text,
   				});
   			}
-    		console.log(data);
+    		console.log("testing");
   		}
 	});
 
 }
 
 
+
 // spotify section
+// var getArtistNames 
+
 // spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function(err, data) {
 //     if ( err ) {
 //         console.log('Error occurred: ' + err);
@@ -78,16 +104,16 @@ var myTweets = function() {
 // });
 
 // for logging to log.txt section
-var writeToLog = function(data) {
-	fs.appendFile("log.txt", '\r\n\r\n');
+// var writeToLog = function(data) {
+// 	fs.appendFile("log.txt", '\r\n\r\n');
 
-	fs.appendFile("log.txt", JSON.stringify(data), function(error){
-		if (error) {
-			return console.log(error);
-		}
-		console.log("log.txt is updated");
-	});
-}
+// 	fs.appendFile("log.txt", JSON.stringify(data), function(error){
+// 		if (error) {
+// 			return console.log(error);
+// 		}
+// 		console.log("log.txt is updated");
+// 	});
+// }
 
 
 // What Each Command Should Do
