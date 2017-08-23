@@ -1,41 +1,15 @@
-// write the code you need to grab the data from keys.js. Then store the keys in a variable.
-// var keys = require("./keys.js") 
+// to connect with other programs
 
-// set up key datas for bash-profile
-// var spotifyKeys = {
-// 	spotify_id: process.env.SPOTIFY_ID,
-// 	spotify_secret: process.env.SPOTIFY_SECRET
-// };
-
-// var omdbKeys = {
-// 	omdb_key: process.env.OMDB_API_KEY
-// };
-
-// var twitterKeys = {
-//   consumer_key: process.env.TWITTER_CONSUMER_KEY,
-//   consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-//   access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-//   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-// };
-
-// console.log(twitterKeys);
-
-// Make it so liri.js can take in one of the following commands:
-// my-tweets
-// spotify-this-song
-// movie-this
-// do-what-it-says
 var fs = require('fs');
+var keys = require('./keys.js') 
 var twitter = require('twitter');
-// var spotify = require('spotify');
+var spotify = require('spotify');
 var request = require('request');
-var arg = process.argv[2];
-
-// var keys = require('./bash-profile');
-// console.log(keys);
+var liriArg = process.argv[2];
 
 // commands for liri to work
-switch(arg) {
+
+switch(liriArg) {
 	case "my-tweets": 
 		myTweets(); 
 		break;
@@ -49,77 +23,146 @@ switch(arg) {
 		doWhatItSays();
 		break;
 	default: 
-		console.log("What are you talking about?");
+		console.log("What are you trying to do? Try again with my-tweets or spotify-this-song or movie-this or do-what-it-says.");
 
 };
 
 // // twitter section
-var myTweets = function() {
+
+function myTweets() {
 	var client = new twitter({
-  		consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  		consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  		access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-  		access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+  		consumer_key: keys.twitterKeys.consumer_key,
+  		consumer_secret: keys.twitterKeys.consumer_secret,
+  		access_token_key: keys.twitterKeys.access_token_key,
+  		access_token_secret: keys.twitterKeys.access_token_secret
 	});
 
-	var params = {screen_name: 'Brandon lee', count: 20};
+	var twitterUsername = process.argv[3];
+	// show my tweet if username is not typed
+	if (!twitterUsername) {
+		twitterUsername = "brandonyhlee";
+	}
 
-	client.get('statuses/user_timeline', params, function(error, tweets, response){
+	params = {screen_name: twitterUsername, count: 21};
+
+	client.get('statuses/user_timeline', params, function(error, data, response){
   		if (!error) {
 
-  			// make empty array for data
-  			var data = [];
+  			for (var i = 0; i < data.length; i++) {
+  				var twitterResults = 
+  				"@" + data[i].user.screen_name + ": " + 
+  				data[i].text + "\r\n" + 
+  				data[i].created_at + "\r\n" +
+  				"------------------------------ " + i + " ------------------------------" + "\r\n";
 
-  			for (var i = 0; i < tweets.length; i++) {
-  				data.push ({
-  					'Date: ' : tweets[i].created_at,
-  					'Tweets: ' : tweets[i].text,
-  				});
+  				console.log(twitterResults);
+  				log(twitterResults);
+  				
   			}
-    		console.log("testing");
+  		}
+  		else {
+  			console.log("Error");
+  			return;
   		}
 	});
 
 }
 
-
-
 // spotify section
-// var getArtistNames 
 
-// spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function(err, data) {
-//     if ( err ) {
-//         console.log('Error occurred: ' + err);
-//         return;
-//     }
- 
-//     // Do something with 'data' 
-// });
+function spotifyThisSong(spotifySong) {
+	var spotifySong = process.argv[3];
+	
+	if(!spotifySong) {
+		spotifySong = "The Sign";
+	}
+
+	params = spotifySong;
+
+	spotify.search({ type: 'track', query: params }, function(err, data) {
+    	if ( err ) {
+       		console.log('Error occurred: ' + err);
+        	return;
+    	}
+    	else {
+    		var songInfo = data.tracks.items;
+    		
+    		for (var i = 0; i < 5; i++) {
+    			if (songInfo[i]!= undefined) {
+    				var spotifyResults = 
+    				"Artist: " + songInfo[i].artists[0].name + "\r\n" + 
+    				"Song: " + songInfo[i].name + "\r\n" +
+    				"Album: " + songInfo[i].album.name + "\r\n" +
+    				"-------------" + i + "---------" + "\r\n";
+    				console.log(spotifyResults);
+    				log(spotifyResults);
+
+    			}
+    		}
+    	}
+	});
+}
 
 // // // omdb section 
-// request('http://www.google.com', function (error, response, body) {
-//   console.log('error:', error); // Print the error if one occurred 
-//   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
-//   console.log('body:', body); // Print the HTML for the Google homepage. 
-// });
 
-// for logging to log.txt section
-// var writeToLog = function(data) {
-// 	fs.appendFile("log.txt", '\r\n\r\n');
+function movieThis(){
+		var movie = process.argv[3];
+			if(!movie){
+				movie = 'Mr. Nobody.';
+			}
+		
+		params = movie
 
-// 	fs.appendFile("log.txt", JSON.stringify(data), function(error){
-// 		if (error) {
-// 			return console.log(error);
-// 		}
-// 		console.log("log.txt is updated");
-// 	});
-// }
+		request("http://www.omdbapi.com/?t=" + params + "&y=&plot=short&r=json&tomatoes=true", function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				var movieObject = JSON.parse(body);
+				console.log(movieObject); // Show the text in the terminal
+				var movieResults =
+				"------------------------------ begin ------------------------------" + "\r\n"
+				"Title: " + movieObject.Title+"\r\n"+
+				"Year: " + movieObject.Year+"\r\n"+
+				"Imdb Rating: " + movieObject.imdbRating+"\r\n"+
+				"Country: " + movieObject.Country+"\r\n"+
+				"Language: " + movieObject.Language+"\r\n"+
+				"Plot: " + movieObject.Plot+"\r\n"+
+				"Actors: " + movieObject.Actors+"\r\n"+
+				"Rotten Tomatoes Rating: " + movieObject.tomatoRating+"\r\n"+
+				"Rotten Tomatoes URL: " + movieObject.tomatoURL + "\r\n" + 
+				"------------------------------ finish ------------------------------" + "\r\n";
+				console.log(movieResults);
+				log(movieResults); // calling log function
+			} 
+			else {
+				console.log("Error :"+ error);
+				return;
+			}
+		});
+	};
 
 
-// What Each Command Should Do
+// Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 
-// node liri.js my-tweets
-// This will show your last 20 tweets and when they were created at in your terminal/bash window.
+function doWhatItSays() {
+	fs.readFile("random.txt", "utf8", function(error, data){
+		if (!error) {
+			doWhatItSaysResults = data.split(",");
+			spotifyThisSong(doWhatItSaysResults[0], doWhatItSaysResults[1]);
+		} 
+		else {
+			console.log("Error occurred" + error);
+		}
+	});
+};
+
+function log(logResults) {
+  fs.appendFile("log.txt", logResults, (error) => {
+    if(error) {
+      throw error;
+    }
+  });
+}
+
+
 // node liri.js spotify-this-song '<song name here>'
 // This will show the following information about the song in your terminal/bash window
 // Artist(s)
@@ -143,14 +186,4 @@ var myTweets = function() {
 //    * Language of the movie.
 //    * Plot of the movie.
 //    * Actors in the movie.
-// If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
-// If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
-// It's on Netflix!
-// You'll use the request package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use 40e9cece.
-// node liri.js do-what-it-says
-// Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-// It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
-// Feel free to change the text in that document to test out the feature for other commands.
-// In addition to logging the data to your terminal/bash window, output the data to a .txt file called log.txt.
-// Make sure you append each command you run to the log.txt file.
-// Do not overwrite your file each time you run a command.
+

@@ -1,0 +1,150 @@
+@brandonyhlee: testing liri node app testing
+Tue Aug 22 00:01:01 +0000 2017
+------------------------------ 0 ------------------------------
+@brandonyhlee: testing for the second time
+Tue Aug 22 21:54:07 +0000 2017
+------------------------------ 0 ------------------------------
+@brandonyhlee: testing liri node app testing
+Tue Aug 22 00:01:01 +0000 2017
+------------------------------ 1 ------------------------------
+@brandonyhlee: testing for the second time
+Tue Aug 22 21:54:07 +0000 2017
+------------------------------ 0 ------------------------------
+@brandonyhlee: testing liri node app testing
+Tue Aug 22 00:01:01 +0000 2017
+------------------------------ 1 ------------------------------
+@latimes: Bill Cosby returns: New defense team unveiled for comedian's retrial on sexual assault charges… https://t.co/Q3qhEFJgz3
+Tue Aug 22 21:55:11 +0000 2017
+------------------------------ 0 ------------------------------
+@latimes: Houston Rockets star Chris Paul relists Bel-Air home he bought from Avril Lavigne https://t.co/agFZLeHeys https://t.co/MuSn7PbuG4
+Tue Aug 22 21:40:11 +0000 2017
+------------------------------ 1 ------------------------------
+@latimes: Thousands are set to protest President Trump as he arrives in Phoenix for a campaign-style rally… https://t.co/wvFBh2ZGmK
+Tue Aug 22 21:30:26 +0000 2017
+------------------------------ 2 ------------------------------
+@latimes: No pardon for Arpaio tonight, White House says https://t.co/9Gq3DKRC15 https://t.co/VQpGkgWjnf
+Tue Aug 22 21:25:09 +0000 2017
+------------------------------ 3 ------------------------------
+@latimes: Cleveland's Seth DeValve becomes the first white NFL player to kneel during the national anthem… https://t.co/U9k16YWQ4A
+Tue Aug 22 21:10:12 +0000 2017
+------------------------------ 4 ------------------------------
+@latimes: RT @kurtisalee: Trump supporters lining up early in Phoenix. Some have a message for McCain: https://t.co/HwB4hfJ3aK
+Tue Aug 22 21:08:07 +0000 2017
+------------------------------ 5 ------------------------------
+@latimes: Missouri governor halts planned execution of Marcellus Williams after DNA questions https://t.co/siKG8PpOXT https://t.co/9Aul5eQLjS
+Tue Aug 22 20:55:09 +0000 2017
+------------------------------ 6 ------------------------------
+@latimes: Morgan Freeman to receive Life Achievement honor at SAG Awards https://t.co/eahRAE6mc4 https://t.co/em1VbiDtdG
+Tue Aug 22 20:40:12 +0000 2017
+------------------------------ 7 ------------------------------
+@latimes: UC Berkeley's new chancellor brings optimism — and a world record — to an embattled campus https://t.co/8svtvMy4v7 https://t.co/7lRJ6anjme
+Tue Aug 22 20:25:09 +0000 2017
+------------------------------ 8 ------------------------------
+@latimes: Wednesday's estimated $700-million Powerball jackpot is second biggest in game history https://t.co/NEMFd5vBeD https://t.co/E5gGJj3vm6
+Tue Aug 22 20:10:13 +0000 2017
+------------------------------ 9 ------------------------------
+@latimes: L.A. City attorney sues Trump administration over threats against anti-crime funds for "Sanctuary" cities… https://t.co/7HRCTH6tsu
+Tue Aug 22 19:40:10 +0000 2017
+------------------------------ 11 ------------------------------
+@latimes: A Star Is Born: Kristen Wiig turns 44 today  https://t.co/ciTvlcRSTT https://t.co/ntrmLI07m0
+Tue Aug 22 19:55:12 +0000 2017
+------------------------------ 10 ------------------------------
+@latimes: How a dangerous Takata air bag made its way into a used car, nearly killing its driver https://t.co/ppZ4hfz5WN https://t.co/LG2ApalOky
+Tue Aug 22 19:25:11 +0000 2017
+------------------------------ 12 ------------------------------
+@latimes: More U.S. sanctions imposed on Russian and Chinese firms accused of working with North Korea https://t.co/Zz7E8BgZzq https://t.co/qgqrLpMGKv
+Tue Aug 22 19:10:19 +0000 2017
+------------------------------ 13 ------------------------------
+@latimes: Spanish official says suspects have identified the mastermind behind the attacks https://t.co/cxBtG6ziy2 https://t.co/sjkOUyWwCv
+Tue Aug 22 18:55:16 +0000 2017
+------------------------------ 14 ------------------------------
+@latimes: No, Mr. President, Obama wasn't a "nation-builder" in Afghanistan https://t.co/sZqDUg0rLd via @latimesopinion https://t.co/gymKxh1goQ
+Tue Aug 22 18:40:16 +0000 2017
+------------------------------ 15 ------------------------------
+@latimes: University of California system didn't follow its own contracting rules, state audit finds https://t.co/XM5H1Dp05W https://t.co/eAEHrQNg1R
+Tue Aug 22 18:25:09 +0000 2017
+------------------------------ 16 ------------------------------
+@latimes: Louise Linton, Steven Mnuchin's wife, goes from book controversy to Instagram controversy https://t.co/I8wc5ZTeRw https://t.co/mAhPLpou5Y
+Tue Aug 22 18:10:12 +0000 2017
+------------------------------ 17 ------------------------------
+@latimes: How Netflix guesses what you want to watch https://t.co/Ueg4Qdd8Xk https://t.co/Gndo9qCFZR
+Tue Aug 22 17:55:09 +0000 2017
+------------------------------ 18 ------------------------------
+@latimes: In India, you can no longer divorce a woman simply by saying (or texting) it three times https://t.co/VkfPAqgrfu
+Tue Aug 22 17:40:11 +0000 2017
+------------------------------ 19 ------------------------------
+@latimes: Bill Cosby returns: New defense team unveiled for comedian's retrial on sexual assault charges… https://t.co/Q3qhEFJgz3
+Tue Aug 22 21:55:11 +0000 2017
+------------------------------ 0 ------------------------------
+@latimes: Houston Rockets star Chris Paul relists Bel-Air home he bought from Avril Lavigne https://t.co/agFZLeHeys https://t.co/MuSn7PbuG4
+Tue Aug 22 21:40:11 +0000 2017
+------------------------------ 1 ------------------------------
+@latimes: Thousands are set to protest President Trump as he arrives in Phoenix for a campaign-style rally… https://t.co/wvFBh2ZGmK
+Tue Aug 22 21:30:26 +0000 2017
+------------------------------ 2 ------------------------------
+@latimes: No pardon for Arpaio tonight, White House says https://t.co/9Gq3DKRC15 https://t.co/VQpGkgWjnf
+Tue Aug 22 21:25:09 +0000 2017
+------------------------------ 3 ------------------------------
+@latimes: Cleveland's Seth DeValve becomes the first white NFL player to kneel during the national anthem… https://t.co/U9k16YWQ4A
+Tue Aug 22 21:10:12 +0000 2017
+------------------------------ 4 ------------------------------
+@latimes: RT @kurtisalee: Trump supporters lining up early in Phoenix. Some have a message for McCain: https://t.co/HwB4hfJ3aK
+Tue Aug 22 21:08:07 +0000 2017
+------------------------------ 5 ------------------------------
+@latimes: Missouri governor halts planned execution of Marcellus Williams after DNA questions https://t.co/siKG8PpOXT https://t.co/9Aul5eQLjS
+Tue Aug 22 20:55:09 +0000 2017
+------------------------------ 6 ------------------------------
+@latimes: Morgan Freeman to receive Life Achievement honor at SAG Awards https://t.co/eahRAE6mc4 https://t.co/em1VbiDtdG
+Tue Aug 22 20:40:12 +0000 2017
+------------------------------ 7 ------------------------------
+@latimes: UC Berkeley's new chancellor brings optimism — and a world record — to an embattled campus https://t.co/8svtvMy4v7 https://t.co/7lRJ6anjme
+Tue Aug 22 20:25:09 +0000 2017
+------------------------------ 8 ------------------------------
+@latimes: Wednesday's estimated $700-million Powerball jackpot is second biggest in game history https://t.co/NEMFd5vBeD https://t.co/E5gGJj3vm6
+Tue Aug 22 20:10:13 +0000 2017
+------------------------------ 9 ------------------------------
+@latimes: A Star Is Born: Kristen Wiig turns 44 today  https://t.co/ciTvlcRSTT https://t.co/ntrmLI07m0
+Tue Aug 22 19:55:12 +0000 2017
+------------------------------ 10 ------------------------------
+@latimes: L.A. City attorney sues Trump administration over threats against anti-crime funds for "Sanctuary" cities… https://t.co/7HRCTH6tsu
+Tue Aug 22 19:40:10 +0000 2017
+------------------------------ 11 ------------------------------
+@latimes: How a dangerous Takata air bag made its way into a used car, nearly killing its driver https://t.co/ppZ4hfz5WN https://t.co/LG2ApalOky
+Tue Aug 22 19:25:11 +0000 2017
+------------------------------ 12 ------------------------------
+@latimes: More U.S. sanctions imposed on Russian and Chinese firms accused of working with North Korea https://t.co/Zz7E8BgZzq https://t.co/qgqrLpMGKv
+Tue Aug 22 19:10:19 +0000 2017
+------------------------------ 13 ------------------------------
+@latimes: Spanish official says suspects have identified the mastermind behind the attacks https://t.co/cxBtG6ziy2 https://t.co/sjkOUyWwCv
+Tue Aug 22 18:55:16 +0000 2017
+------------------------------ 14 ------------------------------
+@latimes: No, Mr. President, Obama wasn't a "nation-builder" in Afghanistan https://t.co/sZqDUg0rLd via @latimesopinion https://t.co/gymKxh1goQ
+Tue Aug 22 18:40:16 +0000 2017
+------------------------------ 15 ------------------------------
+@latimes: University of California system didn't follow its own contracting rules, state audit finds https://t.co/XM5H1Dp05W https://t.co/eAEHrQNg1R
+Tue Aug 22 18:25:09 +0000 2017
+------------------------------ 16 ------------------------------
+@latimes: Louise Linton, Steven Mnuchin's wife, goes from book controversy to Instagram controversy https://t.co/I8wc5ZTeRw https://t.co/mAhPLpou5Y
+Tue Aug 22 18:10:12 +0000 2017
+------------------------------ 17 ------------------------------
+@latimes: How Netflix guesses what you want to watch https://t.co/Ueg4Qdd8Xk https://t.co/Gndo9qCFZR
+Tue Aug 22 17:55:09 +0000 2017
+------------------------------ 18 ------------------------------
+@latimes: In India, you can no longer divorce a woman simply by saying (or texting) it three times https://t.co/VkfPAqgrfu
+Tue Aug 22 17:40:11 +0000 2017
+------------------------------ 19 ------------------------------
+@latimes: Hall of Fame announcer “Felo” Ramirez has died. He was the voice for millions of Spanish-speaking baseball fans… https://t.co/LKhibzqcTb
+Tue Aug 22 17:28:01 +0000 2017
+------------------------------ 20 ------------------------------
+@brandonyhlee: testing for the second time
+Tue Aug 22 21:54:07 +0000 2017
+------------------------------ 0 ------------------------------
+@brandonyhlee: testing liri node app testing
+Tue Aug 22 00:01:01 +0000 2017
+------------------------------ 1 ------------------------------
+@brandonyhlee: testing for the second time
+Tue Aug 22 21:54:07 +0000 2017
+------------------------------ 0 ------------------------------
+@brandonyhlee: testing liri node app testing
+Tue Aug 22 00:01:01 +0000 2017
+------------------------------ 1 ------------------------------
